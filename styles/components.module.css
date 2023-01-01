@@ -1,0 +1,118 @@
+#contents{
+    padding: 20px;
+}
+
+#pageTitle {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    width: fit-content;
+}
+#pageTitle:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    display: block;
+    width: 60px;
+    height: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: black;
+    border-radius: 2px;
+}
+
+#pageInfo{
+    margin: 20px;
+    border-radius: 5px;
+    border: solid 3px green;
+    background-color: rgb(199, 255, 199);
+    font-size: 17px;
+    padding: 20px;
+    line-height: 30px;
+}
+
+#form{
+    padding: 20px;
+    margin: 0 auto;
+    width: fit-content;
+}
+#form input,#form textarea{
+    display: block;
+}
+#form input[type="text"],#form textarea,#form input[type="email"]{
+    width: 500px;
+    padding: 5px 10px;
+    outline: none;
+    border: solid 2px rgb(255, 136, 0);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 254);
+}
+#form input[type="text"]:focus,#form input[type="email"]:focus,#form textarea:focus{
+    background-color: rgb(255, 233, 194);
+    outline: solid 1px orange;
+}
+#form textarea{
+    margin-bottom: 20px;
+    height: 100px;
+    resize: none;
+    line-height: 20px;
+}
+#form label{
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+}
+
+#goButton{
+    border: none;
+    outline: none;
+    background-color: rgb(255, 150, 150);
+    font-size: 16px;
+    padding: 5px 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    display:inline-block;
+}
+#goButton::before{
+    content: "";
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 41px;
+    top: 12px;
+    transform: scale(0);
+    transition: transform 0.3s, opacity 1s;
+}
+#goButton:active:before{
+    animation: buttonClick 0.2s;
+    transition: 0s;
+}
+
+@keyframes buttonClick{
+    0%{
+        transform: scale(0);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(10);
+        opacity: 0.4;
+    }
+}
+
+#submitAfter{
+    padding: 40px;
+}
+#submitAfter p,#submitAfter a{
+    line-height: 30px;
+}
+#submitAfter a{
+    color: rgb(61, 61, 255);
+}
