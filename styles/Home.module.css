@@ -1,0 +1,59 @@
+#content{
+    display: flex;
+}
+
+/*チャット部分*/
+#chatArea{
+    padding: 20px;
+}
+.chatBox{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+}
+.chatPeopleLiveImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.profile{
+    text-align: center;
+    width: 80px;
+    flex-shrink: 0;
+    background-color: rgb(205, 217, 255);
+    padding: 5px;
+    border-radius: 10px;
+}
+.namePeople{
+    font-weight: bold;
+}
+
+.chatValue {
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #555;
+    font-size: 16px;
+    background: #0099ff;
+    height: fit-content;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.chatValue:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    margin-top: -10px;
+    border: 10px solid transparent;
+    border-right: 10px solid #0099ff;
+}
+
+.chatValue p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
